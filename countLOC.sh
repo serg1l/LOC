@@ -12,7 +12,7 @@ process_dir(){
 
     for file in "$current"/*; do
         if [ -f "$file" ]; then
-            lines=$(bat < "$file" | wc -l)
+            lines=$(cat < "$file" | wc -l)
             count=$((count + lines))
 	    echo "$file lines: $lines"
         elif [ -d "$file" ]; then
