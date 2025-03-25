@@ -16,6 +16,8 @@ process_dir(){
             count=$((count + lines))
 	    echo "$file lines: $lines"
         elif [ -d "$file" ]; then
+		echo $'\nentering in subdirectory' "$file"
+	    echo "--------------"
             process_dir "$file"
         fi
     done
